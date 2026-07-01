@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>MEAL FINDER WEBPAGE</title>
+    <link rel="stylesheet" href="MF1Styling.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+</head>
+
+<body>
+    <header class="nav">
+        <div class="brand ms-5">🍴 MEAL FINDER</div>
+        <button id="menuBtn" class="menu-btn me-5">☰</button>
+    </header>
+
+    <!-- SIDE DRAWER -->
+    <aside id="drawer" class="drawer">
+        <button id="closeBtn" class="close-btn">✕</button>
+        <ul id="catList"></ul>
+    </aside>
+
+    <!-- MAIN-BAR -->
+    <section class="MainBar">
+        <div class="search-box">
+            <input id="searchInput" type="text" placeholder="Search recipes here ..." />
+            <button id="searchBtn">🔍</button>
+        </div>
+        <h1>What's in your mind?...</h1>
+        <p>Curate your choices...</p>
+    </section>
+
+    <main class="container">
+        <!---------- Breadcrumb (meal details page only) ---------->
+        <div id="crumb" class="crumb hidden"></div>
+
+        <!------------ Category description ----------->
+        <section id="catInfo" class="cat-info hidden"></section>
+
+        <!------------ Meal detail -------------->
+        <section id="mealDetail" class="meal-detail hidden"></section>
+
+        <!------------ Meals grid (search/category) -------------->
+        <section id="mealsSection" class="hidden">
+            <h2 class="section-title">MEALS</h2>
+            <div id="mealsGrid" class="grid meals-grid"></div>
+        </section>
+
+        <!-------------- Categories grid -------------->
+        <section id="categoriesSection">
+            <h2 class="section-title">CATEGORIES</h2>
+            <div id="catGrid" class="grid cats-grid"></div>
+        </section>
+    </main>
+
+    <!------------ Footer ---------->
+    <footer class="footer"></footer>
+    <script src="P1-MF.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+</html>

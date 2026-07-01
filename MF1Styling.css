@@ -1,0 +1,334 @@
+ * {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+ }
+
+ body {
+     font-family:
+         system-ui,
+         -apple-system,
+         sans-serif;
+     background: whitesmoke;
+     color: black;
+     overflow-x: hidden;
+ }
+
+ .hidden {
+     display: none !important;
+ }
+
+ .nav {
+     background: orange;
+     color: whitesmoke;
+     padding: 15px 20px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     position: sticky;
+     top: 0;
+     z-index: 10;
+ }
+
+ .brand {
+     font-weight: 700;
+     letter-spacing: 1px;
+ }
+
+ .menu-btn,
+ .close-btn {
+     background: none;
+     border: none;
+     color: whitesmoke;
+     font-size: 20px;
+     cursor: pointer;
+ }
+
+ .drawer {
+     position: fixed;
+     top: 0;
+     right: -275px;
+     width: 275px;
+     height: 100vh;
+     background: whitesmoke;
+     box-shadow: -2px 0 8px black;
+     transition: right 0.5s;
+     z-index: 20;
+     padding: 50px 25px 25px;
+     overflow-y: auto;
+ }
+
+ .drawer.open {
+     right: 0;
+ }
+
+ .drawer .close-btn {
+     color: orange;
+     position: absolute;
+     top: 10px;
+     right: 15px;
+     font-size: 20px;
+     border: 2px solid orange;
+     border-radius: 50%;
+     width: 30px;
+     height: 30px;
+ }
+
+ .drawer ul {
+     list-style: none;
+ }
+
+ .drawer li {
+     padding: 8px 2px;
+     border-bottom: 1px solid whitesmoke;
+     cursor: pointer;
+ }
+
+ .drawer li:hover {
+     color: orange;
+ }
+
+ .hero {
+     background: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200") center/cover;
+     min-height: 400px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     color: wheat;
+     text-align: center;
+     padding: 30px 20px;
+     position: relative;
+ }
+
+ .hero::before {
+     content: "";
+     position: absolute;
+     inset: 0;
+     background: black;
+ }
+
+ .hero>* {
+     position: relative;
+     z-index: 1;
+ }
+
+ .hero h1 {
+     font-size: 25px;
+     margin-top: 15px;
+ }
+
+ .hero p {
+     font-size: 15px;
+     letter-spacing: 2px;
+     margin-top: 5px;
+ }
+
+ .search-box {
+     display: flex;
+     align-items: center;
+     background: whitesmoke;
+     border-radius: 30px;
+     padding: 5px;
+     width: 300px;
+ }
+
+ .search-box input {
+     flex: 1;
+     border: none;
+     outline: none;
+     padding: 10px 16px;
+     border-radius: 30px;
+     font-size: 14px;
+ }
+
+ .search-box button {
+     background: orange;
+     color: whitesmoke;
+     border: none;
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+     cursor: pointer;
+     font-size: 25px;
+     margin-left: 110px;
+     padding: 3px;
+ }
+
+ .container {
+     max-width: 1100px;
+     margin: 0 auto;
+     padding: 30px 20px;
+ }
+
+ .section-title {
+     font-size: 14px;
+     letter-spacing: 2px;
+     padding-bottom: 6px;
+     border-bottom: 3px solid orange;
+     display: inline-block;
+     margin-bottom: 20px;
+ }
+
+ .grid {
+     display: grid;
+     gap: 15px;
+ }
+
+ .cats-grid {
+     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+ }
+
+ .meals-grid {
+     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+ }
+
+ .card {
+     background: #fff;
+     border-radius: 5px;
+     overflow: hidden;
+     box-shadow: 0 2px 5px black;
+     cursor: pointer;
+     position: relative;
+     transition: transform 0.15s;
+ }
+
+ .card:hover {
+     transform: translateY(-2px);
+ }
+
+ .card img {
+     width: 100%;
+     height: 110px;
+     object-fit: cover;
+     display: block;
+ }
+
+ .card .tag {
+     position: absolute;
+     top: 8px;
+     right: 8px;
+     background: orange;
+     color: whitesmoke;
+     font-size: 10px;
+     padding: 4px 8px;
+     border-radius: 3px;
+     letter-spacing: 1px;
+ }
+
+ .card .name {
+     padding: 10px;
+     font-size: 15px;
+ }
+
+ .card .area {
+     font-size: 11px;
+     color: wheat;
+ }
+
+ .cat-info {
+     border: 1px solid orange;
+     border-radius: 4px;
+     padding: 15px;
+     background: whitesmoke;
+     margin-bottom: 25px;
+ }
+
+ .cat-info h3 {
+     color: orange;
+     margin-bottom: 8px;
+ }
+
+ .cat-info p {
+     font-size: 13px;
+     line-height: 1.6;
+     color: burlywood;
+ }
+
+ .crumb {
+     background: orange;
+     color: whitesmoke;
+     padding: 10px 15px;
+     border-radius: 5px;
+     margin-bottom: 20px;
+     font-size: 15px;
+ }
+
+ .crumb a {
+     color: whitesmoke;
+     text-decoration: none;
+ }
+
+ .meal-details {
+     background: whitesmoke;
+     border-radius: 5px;
+     padding: 20px;
+     margin-bottom: 25px;
+ }
+
+ .meal-details .top {
+     display: grid;
+     grid-template-columns: 1fr;
+     gap: 20px;
+ }
+
+ @media (min-width: 700px) {
+     .meal-details .top {
+         grid-template-columns: 1fr 1fr;
+     }
+ }
+
+ .meal-details img {
+     width: 100%;
+     border-radius: 5px;
+ }
+
+ .meal-details h2 {
+     color: orange;
+     margin-bottom: 12px;
+ }
+
+ .meal-details .meta {
+     font-size: 15px;
+     margin: 8px 0;
+ }
+
+ .meal-details .meta b {
+     color: gray;
+ }
+
+ .ingredients {
+     background: orange;
+     color: whitesmoke;
+     padding: 15px;
+     border-radius: 5px;
+     margin-top: 10px;
+ }
+
+ .ingredients h4 {
+     margin-bottom: 8px;
+ }
+
+ .ingredients ol {
+     padding-left: 20px;
+     font-size: 13px;
+     line-height: 1.7;
+     column-count: 2;
+ }
+
+ .instructions {
+     margin-top: 20px;
+     font-size: 14px;
+     line-height: 1.7;
+     color: black;
+ }
+
+ .instructions h4 {
+     margin-bottom: 8px;
+ }
+
+ .footer {
+     background: black;
+     height: 60px;
+     margin-top: 30px;
+ }
